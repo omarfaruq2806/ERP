@@ -17,7 +17,6 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login />} />
 
-          {/* প্রটেক্টেড রাউটস (লগইন করা ইউজারদের জন্য) */}
           <Route
             element={
               <ProtectedRoute>

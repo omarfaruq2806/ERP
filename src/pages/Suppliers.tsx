@@ -45,7 +45,7 @@ async function loadSuppliers() {
         <h1 className="text-3xl font-bold">Suppliers</h1>
         <Dialog open={isOpen} onOpenChange={setIsOpen}>
           <DialogTrigger asChild><Button><Plus className="w-4 h-4 mr-2" /> Add Supplier</Button></DialogTrigger>
-          <DialogContent>
+          <DialogContent className="sm:max-w-md p-4 bg-white border-white ">
             <DialogHeader><DialogTitle>Add Supplier</DialogTitle></DialogHeader>
             <form onSubmit={handleSubmit} className="space-y-4">
               <Input placeholder="Name" required value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})} />

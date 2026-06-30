@@ -89,12 +89,12 @@ export function Products() {
               <Plus className="w-4 h-4" /> Add Product
             </Button>
           </DialogTrigger>
-          <DialogContent className="max-w-md">
+          <DialogContent className="sm:max-w-md p-4 bg-white border-white ">
             <DialogHeader>
               <DialogTitle>Add New Product</DialogTitle>
             </DialogHeader>
             
-            <form onSubmit={handleSubmit} className="space-y-4 mt-4">
+            <form onSubmit={handleSubmit} className="space-y-4 mt-4 ">
               <div className="space-y-2">
                 <Label htmlFor="name">Product Name</Label>
                 <Input 

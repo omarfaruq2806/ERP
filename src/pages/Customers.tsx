@@ -83,7 +83,7 @@ export function Customers() {
               <Plus className="w-4 h-4" /> Add Customer
             </Button>
           </DialogTrigger>
-          <DialogContent>
+          <DialogContent  className="sm:max-w-md p-4 bg-white border-white ">
             <DialogHeader>
               <DialogTitle>Add New Customer</DialogTitle>
             </DialogHeader>

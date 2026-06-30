@@ -105,7 +105,7 @@ export function Sales() {
           <DialogTrigger asChild>
             <Button><Plus className="w-4 h-4 mr-2" /> New Sale</Button>
           </DialogTrigger>
-          <DialogContent>
+          <DialogContent className="sm:max-w-md p-4 bg-white border-white ">
             <DialogHeader><DialogTitle>Create New Sale</DialogTitle></DialogHeader>
             <form onSubmit={handleSubmit} className="space-y-4">
               
@@ -117,9 +117,9 @@ export function Sales() {
                   value={formData.customer_id}
                   onChange={(e) => setFormData({...formData, customer_id: e.target.value})}
                 >
-                  <option value="" disabled>-- Select Customer --</option>
+                  <option  value="" disabled>-- Select Customer --</option>
                   {customers.map(c => (
-                    <option key={c.id} value={c.id}>{c.name} - {c.phone}</option>
+                    <option key={c.id} value={c.id} >{c.name} - {c.phone}</option>
                   ))}
                 </select>
               </div>

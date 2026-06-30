@@ -97,7 +97,7 @@ export function Purchases() {
           <DialogTrigger asChild>
             <Button><Plus className="w-4 h-4 mr-2" /> New Purchase</Button>
           </DialogTrigger>
-          <DialogContent>
+          <DialogContent className="sm:max-w-md p-4 bg-white border-white ">
             <DialogHeader><DialogTitle>Create New Purchase</DialogTitle></DialogHeader>
             <form onSubmit={handleSubmit} className="space-y-4">
               
