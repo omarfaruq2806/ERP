@@ -1,5 +1,4 @@
 import { supabase } from '@/lib/supabase';
-import type { Sale } from '@/types';
 
 // সব সেলস ডাটা নিয়ে আসার ফাংশন (কাস্টমার ও প্রোডাক্টের নাম সহ)
 export async function getSales() {

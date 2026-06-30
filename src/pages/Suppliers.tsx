@@ -3,27 +3,24 @@ import type { Supplier } from "@/types";
 import { getSuppliers, addSupplier } from "@/services/supplierService";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Plus, Loader2 } from "lucide-react";
+import { Plus } from "lucide-react";
 
 export function Suppliers() {
   const [suppliers, setSuppliers] = useState<Supplier[]>([]);
-  const [loading, setLoading] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   
   const [formData, setFormData] = useState({ name: "", phone: "", email: "", address: "" });
 
   useEffect(() => { loadSuppliers(); }, []);
-
-  async function loadSuppliers() {
+async function loadSuppliers() {
     try {
       const data = await getSuppliers();
       setSuppliers(data);
-    } finally {
-      setLoading(false);
+    } catch (error) {
+      console.error("Error loading suppliers:", error);
     }
   }
 
