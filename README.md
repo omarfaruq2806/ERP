@@ -1,4 +1,4 @@
-# 🚀 Code Bondhu ERP - Inventory Management System
+# 🚀 MINI ERP - Inventory Management System
 
 A modern, cloud-based Mini ERP (Enterprise Resource Planning) and Inventory Management System built to streamline business operations. Manage your products, track sales and purchases, and keep a record of your customers and suppliers all in one place.
 
