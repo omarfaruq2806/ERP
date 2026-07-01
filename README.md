@@ -4,7 +4,7 @@ A modern, cloud-based Mini ERP (Enterprise Resource Planning) and Inventory Mana
 
 > **🤖 AI-Assisted Development:** This project was developed utilizing an AI-assisted workflow. The core logic, database architecture, and project structure were driven by human planning, while AI tools were heavily leveraged for rapid prototyping, debugging, UI component generation, and optimizing Tailwind CSS styling.
 
-**Live Demo:** [Insert your Vercel Live Link Here]
+**Live Demo:** [https://erp-xtvd.vercel.app/](https://erp-xtvd.vercel.app/)
 
 ## ✨ Key Features
 
@@ -29,5 +29,5 @@ Follow these steps to set up the project on your local machine.
 
 ### 1. Clone the repository
 ```bash
-git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+git clone (https://github.com/omarfaruq2806/ERP.git)
 cd your-repo-name
