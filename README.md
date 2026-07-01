@@ -1,75 +1,33 @@
-# React + TypeScript + Vite
+# 🚀 Code Bondhu ERP - Inventory Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, cloud-based Mini ERP (Enterprise Resource Planning) and Inventory Management System built to streamline business operations. Manage your products, track sales and purchases, and keep a record of your customers and suppliers all in one place.
 
-Currently, two official plugins are available:
+> **🤖 AI-Assisted Development:** This project was developed utilizing an AI-assisted workflow. The core logic, database architecture, and project structure were driven by human planning, while AI tools were heavily leveraged for rapid prototyping, debugging, UI component generation, and optimizing Tailwind CSS styling.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Live Demo:** [Insert your Vercel Live Link Here]
 
-## React Compiler
+## ✨ Key Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **🔐 Secure Authentication:** User login and registration powered by Supabase Auth.
+- **📊 Interactive Dashboard:** Real-time summary of total products, total sales, purchases, and low-stock alerts.
+- **📦 Inventory Management:** Full CRUD (Create, Read, Update, Delete) operations for Products.
+- **🛒 Sales & Purchases:** Dynamic entry of sales and purchases that automatically updates product stock in real-time.
+- **👥 Directory Management:** Separate modules for managing Customers and Suppliers.
+- **📱 Responsive UI:** Fully responsive, premium glassmorphism design built with Tailwind CSS, optimized for both desktop and mobile.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack & Tools
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Frontend:** React.js, Vite, TypeScript
+- **Styling:** Tailwind CSS, Lucide React (Icons), shadcn/ui (Components)
+- **Backend & Database:** Supabase (PostgreSQL, Authentication)
+- **Routing:** React Router DOM
+- **Development Approach:** AI-Assisted Pair Programming
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Getting Started (Run Locally)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Follow these steps to set up the project on your local machine.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+### 1. Clone the repository
+```bash
+git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+cd your-repo-name

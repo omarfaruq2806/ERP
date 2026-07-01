@@ -37,59 +37,76 @@ export function Login() {
     }
   };
 
-  return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-50">
-      <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-xl shadow-md border border-gray-200">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold tracking-tight text-gray-900">Code Bondhu ERP</h1>
-          <p className="text-sm text-gray-500 mt-2">Login or create an account to continue</p>
+ return (
+  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-slate-100 to-blue-50 p-4">
+    <div className="w-full max-w-md p-6 sm:p-8 space-y-8 bg-white/90 backdrop-blur-md rounded-2xl shadow-xl border border-white">
+      
+      {/* Header Section */}
+      <div className="text-center space-y-2">
+        <h1 className="text-3xl font-extrabold tracking-tight text-gray-900">
+          Mini<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">ERP</span>
+        </h1>
+        <p className="text-sm font-medium text-slate-500">
+          Welcome back! Login or create an account.
+        </p>
+      </div>
+
+      {/* Error Message */}
+      {error && (
+        <div className="flex items-start gap-2 p-3.5 text-sm font-medium text-red-600 bg-red-50 border border-red-100 rounded-xl">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 shrink-0" viewBox="0 0 20 20" fill="currentColor">
+            <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+          </svg>
+          <p>{error}</p>
+        </div>
+      )}
+
+      {/* Form Section */}
+      <div className="space-y-5">
+        <div className="space-y-1.5">
+          <label className="block text-sm font-semibold text-slate-700">Email Address</label>
+          <Input
+            type="email"
+            placeholder="admin@example.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="w-full px-4 py-5 bg-slate-50 border-slate-200 focus:bg-white transition-colors rounded-xl"
+          />
+        </div>
+        
+        <div className="space-y-1.5">
+          <label className="block text-sm font-semibold text-slate-700">Password</label>
+          <Input
+            type="password"
+            placeholder="••••••••"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="w-full px-4 py-5 bg-slate-50 border-slate-200 focus:bg-white transition-colors rounded-xl"
+          />
         </div>
 
-        {error && (
-          <div className="p-3 text-sm text-red-500 bg-red-50 border border-red-200 rounded-md">
-            {error}
-          </div>
-        )}
-
-        <div className="space-y-4">
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-            <Input
-              type="email"
-              placeholder="admin@example.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Password</label>
-            <Input
-              type="password"
-              placeholder="********"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-
-          <div className="flex gap-4 pt-2">
-            <Button
-              className="w-full"
-              onClick={() => handleAuth("login")}
-              disabled={loading || !email || !password}
-            >
-              {loading ? "Please wait..." : "Login"}
-            </Button>
-            <Button
-              variant="outline"
-              className="w-full"
-              onClick={() => handleAuth("register")}
-              disabled={loading || !email || !password}
-            >
-              Register
-            </Button>
-          </div>
+        {/* Action Buttons - Stack on mobile, inline on larger screens */}
+        <div className="flex flex-col sm:flex-row gap-3 pt-4">
+          <Button
+            className="w-full sm:w-1/2 py-6 rounded-xl text-base font-semibold shadow-md hover:shadow-lg transition-all"
+            onClick={() => handleAuth("login")}
+            disabled={loading || !email || !password}
+          >
+            {loading ? "Wait..." : "Login"}
+          </Button>
+          
+          <Button
+            variant="outline"
+            className="w-full sm:w-1/2 py-6 rounded-xl text-base font-semibold border-slate-200 hover:bg-slate-50 transition-all"
+            onClick={() => handleAuth("register")}
+            disabled={loading || !email || !password}
+          >
+            Register
+          </Button>
         </div>
       </div>
+
     </div>
-  );
+  </div>
+);
 }
